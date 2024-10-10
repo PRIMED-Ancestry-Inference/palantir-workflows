@@ -23,6 +23,7 @@ task PerformPCA {
       --bfile ~{basename} \
       -n ~{nthreads} \
       -d ~{n_pcs} \
+      --div none \
       --memory ~{mem_gb} \
       --outpc ~{basename}.pc \
       --outpve ~{basename}.pc.variance \
@@ -97,6 +98,7 @@ task ProjectArray {
       --numthreads ~{nthreads} \
       --memory ~{mem_gb} \
       --project \
+      --div none \
       --inmeansd meansd.txt \
       --outproj projections.txt \
       --inload loadings.txt \
