@@ -19,7 +19,7 @@ task PerformPCA {
     cp ~{bed} ~{basename}.bed
     cp ~{fam} ~{basename}.fam
 
-    ~/flashpca/flashpca \
+    /home/flashpca-user/flashpca/flashpca \
       --bfile ~{basename} \
       -n ~{nthreads} \
       -d ~{n_pcs} \
@@ -92,7 +92,7 @@ task ProjectArray {
     exit 1
     fi
 
-    ~/flashpca/flashpca \
+    /home/flashpca-user/flashpca/flashpca \
       --bfile ~{basename} \
       --numthreads ~{nthreads} \
       --memory ~{mem_gb} \
